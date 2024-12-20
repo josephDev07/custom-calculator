@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { CalculatorService } from './calculator.service';
 import { AddCommand } from './command/add-command';
 import { SubtractCommand } from './command/subtract-command';
+import { DivCommand } from './command/div-command';
 
 @Component({
   selector: 'app-root',
@@ -31,6 +32,7 @@ import { SubtractCommand } from './command/subtract-command';
         <select [(ngModel)]="selectedOperation">
           <option value="add">Addition</option>
           <option value="subtract">Soustraction</option>
+          <option value="division">division</option>
         </select>
         <button (click)="addOperation()">Ajouter</button>
       </div>
@@ -132,6 +134,9 @@ export class AppComponent {
           break;
         case 'subtract':
           this.calculatorService.addCommand(this.operationName, new SubtractCommand());
+          break;
+          case 'division':
+          this.calculatorService.addCommand(this.operationName, new DivCommand());
           break;
       }
       this.dynamicOperations.push({ name: this.operationName });
