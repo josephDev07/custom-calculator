@@ -1,5 +1,7 @@
 # Calculatrice
 
+// Concept de projet  : calculatrice personnalisee affiche juste les chiffres , et les operations a jouter par chaque user selon le besoin !
+
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.4.
 
 ## Development server
